@@ -11,6 +11,9 @@ unset($_SESSION['username']);
 //hancur data
 session_destroy();
 
+//hapus cookie
+setcookie('username','',time()-60);
+
 //kembali ke login
 header("location: login.php")
 

@@ -21,6 +21,14 @@ if($login > 0) {
 	// echo "Selamat datang";
 	//memasukan data username kedalam session
 	$_SESSION['username']=$username;
+
+	// jika remember tercentang
+	if(isset($_POST['remember'])) {
+		//membuat cookie untuk mengingat username selama 1 menit
+		setcookie('username',$username,time()+60);
+	}
+	
+	//ke tampil_data
 	header("location: tampil_data.php");
 } else {
 	// echo "Maaf gagal login";

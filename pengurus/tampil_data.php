@@ -30,11 +30,11 @@ $data=mysqli_query($conn,$query);
 <body>
 
 <h1>Data Pengurus</h1>
-<!-- <p>
-	<a href="tampil_data.php">Pengurus</a>
-	<a href="tampil_divisi.php">Divisi</a>
-	<a href="logout.php">Keluar</a>
-</p> -->
+<p>
+	<!-- <a href="tampil_data.php">Pengurus</a> -->
+	<!-- <a href="tampil_divisi.php">Divisi</a> -->
+	<a href="logout.php">logout</a>
+</p>
 <table border="1">
 	<tr>
 		<th>ID</th>

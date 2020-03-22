@@ -1,3 +1,21 @@
+<?php
+//buat session
+if(!isset($_SESSION)) {
+	session_start();
+}
+
+//apakah ada cookie yang tersimpan
+if(!empty($_COOKIE['username'])) {
+	//memasukan varible session
+	$_SESSION['username']=$_COOKIE['username'];
+	header("location: tampil_data.php");
+}
+
+//jika variable session ada maka langsung ke tampil data
+if(isset($_SESSION['username'])) {
+	header("location: tampil_data.php");
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +33,10 @@
 		<tr>
 			<th>Password</th>
 			<td><input type="password" name="password"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="checkbox" name="remember"> Remember Me</td>
 		</tr>
 		<tr>
 			<td></td>
